@@ -8,7 +8,6 @@ if ($_POST['nuname'] != NULL && $_POST['npass'] != NULL && $_POST['rpass'] != NU
     if ($_POST['npass'] === $_POST['rpass'])
     {
 
-        //$dbhandler = new PDO('mysql:host=localhost;dbname=mydata', 'root', 'bhargav');
         $dbhandler = new PDO('mysql:host=localhost;dbname=mydata', 'root', 'bhargav');
         //$dbhandler = new PDO('mysql:host=localhost;dbname=Login', 'root', 'ashu1996');
         //echo "Connection is established...<br/>";

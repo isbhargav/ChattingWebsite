@@ -14,11 +14,10 @@ else{
 $dbhandler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $setonline="INSERT INTO online VALUES('".$_SESSION['uname']."',1)";
 
-if($_SESSION['online']!==true) //just for sanity check
-{
+
 $query = $dbhandler->query($setonline);
 $_SESSION['online']=true;
-}
+
 
 //$result = $query->fetch(PDO::FETCH_ASSOC);
 }
@@ -124,7 +123,7 @@ $query = $dbhandler->query($sql);
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var msgs=JSON.parse(xhttp.responseText);
-       for(var i=0;i < msgs.length;i++)
+       for(var i=0;i < msgs.length ;i++)
            {
                
                
@@ -212,6 +211,10 @@ $query = $dbhandler->query($sql);
         
     });
 }.call(this));
+    $("#send_message").click(
+        var txt_msg=$("#txt_msg").val;
+       
+    );
        
 
 </script>
